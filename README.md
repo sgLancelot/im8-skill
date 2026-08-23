@@ -23,13 +23,13 @@ The snapshot is a cache, not a rival authority. When the skill *can* reach the w
 
 ## Install
 
-**Claude app:** download [`im8.skill`](../../releases) (or package the `im8/` folder as a zip renamed to `.skill`) and add it under Settings → Capabilities → Skills.
+**Claude app:** download `im8.skill` from the [latest release](https://github.com/sgLancelot/im8-skill/releases/latest) and add it under Settings → Capabilities → Skills.
 
 **Claude Code:** copy the skill folder into your skills directory:
 
 ```bash
-git clone https://github.com/<owner>/im8-reform.git
-cp -r im8-reform/im8 ~/.claude/skills/
+git clone https://github.com/sgLancelot/im8-skill.git
+cp -r im8-skill/im8 ~/.claude/skills/
 ```
 
 Then ask: *"What does the medium-risk cloud baseline say about database activity monitoring?"* — or invoke it directly with `/im8`.
