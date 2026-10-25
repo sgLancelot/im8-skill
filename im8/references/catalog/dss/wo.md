@@ -1,7 +1,7 @@
 # WCAG : Operable (WO)
 
 Source: https://info.standards.tech.gov.sg/control-catalog/dss/wo/
-Page last updated: 5 March 2026
+Page last updated: 19 October 2026
 
 Content © Government Technology Agency of Singapore, snapshotted from the public portal for grounding; canonical source is the live portal.
 
@@ -185,13 +185,11 @@ Provide descriptive headers and labels that identify the context of surrounding 
 
 ### Recommendations
 
-Do not disable platform or user-agent default visual focus indicators. If default focus indicators are not available or do not meet other accessible guidelines like colour contrast, modify the background colour or border of the element with focus.
-
-Ensure that 'floating' components like widgets and sticky headers do not cover elements receiving focus.
+Review and test the wording of headings and labels to ensure they are clear and self-explanatory.
 
 ### Rationale
 
-Allows end users to quickly identify which element or control has keyboard focus. This is especially important for users relying exclusively on keyboards to navigate.
+Clear and descriptive headings help end users understand relationships between different pieces of the content, and find information more easily. Descriptive and instructive labels help users identify specific components within the content and provide important cues and instructions that aid in accomplishing the task.
 
 ## WO-13 — Focus Visible and Not Obscured
 

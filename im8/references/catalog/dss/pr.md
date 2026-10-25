@@ -1,7 +1,7 @@
 # Performance and Reliability (PR)
 
 Source: https://info.standards.tech.gov.sg/control-catalog/dss/pr/
-Page last updated: 24 March 2026
+Page last updated: 19 October 2026
 
 Content © Government Technology Agency of Singapore, snapshotted from the public portal for grounding; canonical source is the live portal.
 
@@ -37,13 +37,15 @@ Register and implement WOGAA on all public facing digital services.
 
 Registration and implementation includes:
 
-1. Registration of all public facing digital services
-2. Implementation of WOGAA tracking code
-3. Enabling Sentiments
+Registration of all public facing digital services
+
+Implementation of WOGAA tracking code
+
+Enabling Sentiments
 
 Refer to Setup Guide for details.
 
-Only registration is required for SaaS and COTS products that do not allow customisation and the implementation of the tracking code and sentiments.
+Saas and COTS products that do not allow customisation must still register with WOGAA, but are not required to implement the tracking code or Sentiments.
 
 ### Rationale
 

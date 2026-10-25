@@ -1,5 +1,7 @@
 # Portal Map — info.standards.tech.gov.sg
 
+> **Update, 19 Oct 2026:** Generative AI moved to its own catalog section (`/control-catalog/gen-ai/ga/`; the old URL redirects). New control IS-15 added to the four main cyber baselines (now 118/118/138/104 controls). Current page dates and counts live in `catalog/SNAPSHOT-PORTAL.md`.
+
 Complete map of the authoritative portal (crawled 2026-08-11 from sitemap.xml; ~50 URLs). Per-page "last updated" dates shown where the page displays one. Fetch the live page before answering — dates move.
 
 ## Top-level pages
@@ -44,7 +46,7 @@ Hub: `/control-catalog/cybersecurity/` (updated 26 Mar 2026). Each family page p
 | cs | Container Security | rs | Resiliency (family page exists; absent from sampled SSP baselines) |
 | dc | Datacentre | sc | Software Supply Chain |
 | dp | Data Protection | sd | Secure Development |
-| ga | Generative AI | st | Security Testing |
+| ga | Generative AI (now `/control-catalog/gen-ai/ga/`) | st | Security Testing |
 | hr | High-Risk (CII-specific) | | |
 
 ## DSS control-family pages (9)

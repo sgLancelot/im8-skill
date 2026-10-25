@@ -10,13 +10,13 @@ Content © Government Technology Agency of Singapore, snapshotted from the publi
 ## Low-Risk Cloud
 
 Source: https://info.standards.tech.gov.sg/ssp/low-risk-cloud/
-Page last updated: 24 March 2026
+Page last updated: 19 October 2026
 
 System category: A generic system hosted on the cloud through a third-party Cloud Service Provider.
 
 Sensitivity ceiling: Up to Restricted, Sensitive Normal
 
-Controls (117):
+Controls (118):
 
 | ID | Title | Profile level |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ Controls (117):
 | AS-4 | Authentication Mechanism Rate-Limiting | 1 |
 | AS-5 | Password Requirements | 1 |
 | AS-6 | Password Salting and Hashing | 1 |
-| AS-7 | Access Control Check Enforcement | 1 |
+| AS-7 | Access Control Check Enforcement | 0 |
 | AS-8 | Secrets Management | 1 |
 | AS-9 | Content Security Policy (CSP) | 1 |
 | AS-10 | HTTP Strict Transport Security (HSTS) | 2 |
@@ -92,10 +92,10 @@ Controls (117):
 | **AC: Access Control** | | |
 | AC-1 | Principle of Least Privilege | 1 |
 | AC-2 | Multi-Factor Authentication (MFA) | 1 |
-| AC-3 | Inactive and Expired Accounts | 1 |
+| AC-3 | Inactive and Expired Accounts | 0 |
 | AC-4 | Access Review | 1 |
-| AC-5 | Endpoint Device Hardening | 1 |
-| AC-6 | Default Credentials | 1 |
+| AC-5 | Endpoint Device Hardening | 0 |
+| AC-6 | Default Credentials | 0 |
 | AC-7 | Singpass/Corppass for Public Users | 1 |
 | AC-8 | Automated Account Lifecycle Management | 1 |
 | AC-9 | Endpoint Device Management | 1 |
@@ -117,8 +117,8 @@ Controls (117):
 | CS-10 | Container Workload Segmentation | 1 |
 | CS-11 | Container Runtime Security | 2 |
 | **PM: Security Programme Management** | | |
-| PM-1 | Cybersecurity Incident Management Plan | 1 |
-| PM-2 | Risk Assessment | 1 |
+| PM-1 | Cybersecurity Incident Management Plan | 0 |
+| PM-2 | Risk Assessment | 0 |
 | PM-3 | System Security Plan (SSP) Development | 0 |
 | PM-4 | Approval of Residual Risks | 0 |
 | PM-5 | Central Submission of Approved System Security Plan (SSP) | 0 |
@@ -138,6 +138,7 @@ Controls (117):
 | IS-12 | DNS Security Extensions (DNSSEC) | 2 |
 | IS-13 | Defensive Domain Name Registration | 2 |
 | IS-14 | Singapore SMS Sender ID Registry Registration | 0 |
+| IS-15 | Official URL shorteners | 1 |
 | **SD: Secure Development** | | |
 | SD-1 | Push Protection for Secrets | 1 |
 | SD-2 | Default Branch Push Permissions | 1 |
@@ -154,25 +155,25 @@ Controls (117):
 ## Medium-Risk Cloud
 
 Source: https://info.standards.tech.gov.sg/ssp/medium-risk-cloud/
-Page last updated: 24 March 2026
+Page last updated: 19 October 2026
 
 System category: A generic system hosted on the cloud through a third-party Cloud Service Provider.
 
 Sensitivity ceiling: Confidential, Sensitive High
 
-Controls (117):
+Controls (118):
 
 | ID | Title | Profile level |
 | --- | --- | --- |
 | **AS: Application Security** | | |
-| AS-1 | Input Validation | 0 |
+| AS-1 | Input Validation | 1 |
 | AS-2 | Parameterised Interfaces | 1 |
-| AS-3 | Output Sanitisation | 0 |
+| AS-3 | Output Sanitisation | 1 |
 | AS-4 | Authentication Mechanism Rate-Limiting | 1 |
 | AS-5 | Password Requirements | 1 |
 | AS-6 | Password Salting and Hashing | 1 |
 | AS-7 | Access Control Check Enforcement | 0 |
-| AS-8 | Secrets Management | 0 |
+| AS-8 | Secrets Management | 1 |
 | AS-9 | Content Security Policy (CSP) | 1 |
 | AS-10 | HTTP Strict Transport Security (HSTS) | 2 |
 | AS-11 | Session Management | 1 |
@@ -191,22 +192,22 @@ Controls (117):
 | SC-8 | Software Artefact Signature Verification | 2 |
 | SC-9 | Internal Code Collaboration and Sharing | 2 |
 | **ST: Security Testing** | | |
-| ST-1 | Vulnerability Assessment | 0 |
+| ST-1 | Vulnerability Assessment | 1 |
 | ST-2 | Cloud Security Posture Management | 1 |
-| ST-3 | Public Vulnerability Disclosure Programme | 0 |
-| ST-4 | Security Testing Programme | 0 |
+| ST-3 | Public Vulnerability Disclosure Programme | 1 |
+| ST-4 | Security Testing Programme | 1 |
 | ST-5 | Vulnerability Management | 1 |
 | **NS: Network Security** | | |
-| NS-1 | Network and System Component Segmentation | 0 |
+| NS-1 | Network and System Component Segmentation | 1 |
 | NS-2 | Access Restrictions on CSP Resources Outside Virtual Network | 1 |
 | NS-3 | Deny by Default - Allow by Exception | 1 |
 | NS-4 | Inter-Private Network Connectivity | 1 |
-| NS-5 | Network and Application Layer Filtering | 0 |
+| NS-5 | Network and Application Layer Filtering | 1 |
 | NS-6 | Valid and Trusted SSL/TLS Certificates | 1 |
 | NS-7 | Secure Inter-Service Communication | 1 |
 | NS-8 | Secure Cloud and On-Premises Connectivity | 1 |
 | **BR: Backup and Recovery** | | |
-| BR-1 | Backup | 0 |
+| BR-1 | Backup | 1 |
 | BR-2 | Recovery Testing | 1 |
 | BR-3 | Backup Retention | 1 |
 | **DP: Data Protection** | | |
@@ -217,13 +218,13 @@ Controls (117):
 | **LM: Logging and Monitoring** | | |
 | LM-1 | Separate Log Storage | 1 |
 | LM-2 | Tamper-Resistant Log Storage | 1 |
-| LM-3 | Network Flow Logging | 0 |
-| LM-4 | Audit Logging | 0 |
+| LM-3 | Network Flow Logging | 1 |
+| LM-4 | Audit Logging | 1 |
 | LM-5 | Database Logging | 1 |
-| LM-6 | Access Logging | 0 |
+| LM-6 | Access Logging | 1 |
 | LM-7 | Host Security Event Logging | 1 |
 | LM-8 | Security Log Retention | 1 |
-| LM-9 | Security Monitoring and Alerting | 0 |
+| LM-9 | Security Monitoring and Alerting | 1 |
 | LM-10 | Resource Usage Monitoring and Alerting | 1 |
 | LM-11 | Service Level Monitoring and Alerting | 2 |
 | LM-12 | Central Security Log Management and Monitoring | 0 |
@@ -235,7 +236,7 @@ Controls (117):
 | LM-19 | Log Sanitisation | 1 |
 | **AC: Access Control** | | |
 | AC-1 | Principle of Least Privilege | 1 |
-| AC-2 | Multi-Factor Authentication (MFA) | 0 |
+| AC-2 | Multi-Factor Authentication (MFA) | 1 |
 | AC-3 | Inactive and Expired Accounts | 0 |
 | AC-4 | Access Review | 1 |
 | AC-5 | Endpoint Device Hardening | 0 |
@@ -261,8 +262,8 @@ Controls (117):
 | CS-10 | Container Workload Segmentation | 1 |
 | CS-11 | Container Runtime Security | 2 |
 | **PM: Security Programme Management** | | |
-| PM-1 | Cybersecurity Incident Management Plan | 1 |
-| PM-2 | Risk Assessment | 1 |
+| PM-1 | Cybersecurity Incident Management Plan | 0 |
+| PM-2 | Risk Assessment | 0 |
 | PM-3 | System Security Plan (SSP) Development | 0 |
 | PM-4 | Approval of Residual Risks | 0 |
 | PM-5 | Central Submission of Approved System Security Plan (SSP) | 0 |
@@ -282,6 +283,7 @@ Controls (117):
 | IS-12 | DNS Security Extensions (DNSSEC) | 1 |
 | IS-13 | Defensive Domain Name Registration | 1 |
 | IS-14 | Singapore SMS Sender ID Registry Registration | 0 |
+| IS-15 | Official URL shorteners | 1 |
 | **SD: Secure Development** | | |
 | SD-1 | Push Protection for Secrets | 1 |
 | SD-2 | Default Branch Push Permissions | 1 |
@@ -290,7 +292,7 @@ Controls (117):
 | SD-5 | Dependency Scanning | 1 |
 | SD-6 | Secret Detection | 1 |
 | SD-7 | CI Environment Variable Secrets Management | 1 |
-| SD-8 | Deployment Environment Segregation | 0 |
+| SD-8 | Deployment Environment Segregation | 1 |
 | **CK: Cryptography, Encryption and Key Management** | | |
 | CK-1 | Cryptographic Key Establishment | 1 |
 | CK-2 | Cryptographic Key Rotation | 1 |
@@ -298,36 +300,36 @@ Controls (117):
 ## High-Risk Cloud CII
 
 Source: https://info.standards.tech.gov.sg/ssp/high-risk-cloud/
-Page last updated: 24 March 2026
+Page last updated: 19 October 2026
 
 System category: A generic system hosted on the cloud through a third-party Cloud Service Provider.
 
 Sensitivity ceiling: Confidential, Sensitive High
 
-Controls (137):
+Controls (138):
 
 | ID | Title | Profile level |
 | --- | --- | --- |
 | **AS: Application Security** | | |
-| AS-1 | Input Validation | 0 |
+| AS-1 | Input Validation | 1 |
 | AS-2 | Parameterised Interfaces | 1 |
-| AS-3 | Output Sanitisation | 0 |
-| AS-4 | Authentication Mechanism Rate-Limiting | 0 |
-| AS-5 | Password Requirements | 0 |
-| AS-6 | Password Salting and Hashing | 0 |
+| AS-3 | Output Sanitisation | 1 |
+| AS-4 | Authentication Mechanism Rate-Limiting | 1 |
+| AS-5 | Password Requirements | 1 |
+| AS-6 | Password Salting and Hashing | 1 |
 | AS-7 | Access Control Check Enforcement | 0 |
-| AS-8 | Secrets Management | 0 |
+| AS-8 | Secrets Management | 1 |
 | AS-9 | Content Security Policy (CSP) | 1 |
 | AS-10 | HTTP Strict Transport Security (HSTS) | 2 |
-| AS-11 | Session Management | 0 |
-| AS-12 | Malware Scanning of Uploaded Files | 0 |
+| AS-11 | Session Management | 1 |
+| AS-12 | Malware Scanning of Uploaded Files | 1 |
 | AS-13 | Exposure of Internal System Details | 1 |
-| AS-14 | Secure Cryptographic Libraries | 0 |
+| AS-14 | Secure Cryptographic Libraries | 1 |
 | AS-15 | Password Change | 1 |
 | **SC: Software Supply Chain** | | |
 | SC-1 | Code Repository | 1 |
 | SC-2 | Commit Signing | 2 |
-| SC-3 | Peer Review | 0 |
+| SC-3 | Peer Review | 1 |
 | SC-4 | Dependency Manifest Version Pinning | 1 |
 | SC-5 | Build and Release Process | 1 |
 | SC-6 | Dependency Installation during Deployment | 1 |
@@ -335,49 +337,49 @@ Controls (137):
 | SC-8 | Software Artefact Signature Verification | 2 |
 | SC-9 | Internal Code Collaboration and Sharing | 2 |
 | **ST: Security Testing** | | |
-| ST-1 | Vulnerability Assessment | 0 |
-| ST-2 | Cloud Security Posture Management | 0 |
-| ST-3 | Public Vulnerability Disclosure Programme | 0 |
-| ST-4 | Security Testing Programme | 0 |
-| ST-5 | Vulnerability Management | 0 |
+| ST-1 | Vulnerability Assessment | 1 |
+| ST-2 | Cloud Security Posture Management | 1 |
+| ST-3 | Public Vulnerability Disclosure Programme | 1 |
+| ST-4 | Security Testing Programme | 1 |
+| ST-5 | Vulnerability Management | 1 |
 | **NS: Network Security** | | |
-| NS-1 | Network and System Component Segmentation | 0 |
+| NS-1 | Network and System Component Segmentation | 1 |
 | NS-2 | Access Restrictions on CSP Resources Outside Virtual Network | 1 |
 | NS-3 | Deny by Default - Allow by Exception | 1 |
 | NS-4 | Inter-Private Network Connectivity | 1 |
-| NS-5 | Network and Application Layer Filtering | 0 |
+| NS-5 | Network and Application Layer Filtering | 1 |
 | NS-6 | Valid and Trusted SSL/TLS Certificates | 1 |
 | NS-7 | Secure Inter-Service Communication | 1 |
-| NS-8 | Secure Cloud and On-Premises Connectivity | 0 |
+| NS-8 | Secure Cloud and On-Premises Connectivity | 1 |
 | NS-9 | Intrusion Prevention System (IPS)/Intrusion Detection System (IDS) | 1 |
 | NS-10 | Private Network Connectivity | 1 |
-| NS-11 | Alerts on Firewall Configuration Changes | 0 |
+| NS-11 | Alerts on Firewall Configuration Changes | 1 |
 | **BR: Backup and Recovery** | | |
-| BR-1 | Backup | 0 |
-| BR-2 | Recovery Testing | 0 |
-| BR-3 | Backup Retention | 0 |
-| BR-4 | Disaster Recovery Plan | 0 |
-| BR-5 | Business Continuity Plan | 0 |
-| BR-6 | Business Continuity Exercise | 0 |
+| BR-1 | Backup | 1 |
+| BR-2 | Recovery Testing | 1 |
+| BR-3 | Backup Retention | 1 |
+| BR-4 | Disaster Recovery Plan | 1 |
+| BR-5 | Business Continuity Plan | 1 |
+| BR-6 | Business Continuity Exercise | 1 |
 | **DP: Data Protection** | | |
 | DP-1 | Data Residency | 0 |
 | DP-2 | Data at Rest Encryption | 1 |
 | DP-3 | Data in Transit Encryption | 1 |
 | DP-4 | Central Cloud Tenant Management | 1 |
 | **LM: Logging and Monitoring** | | |
-| LM-1 | Separate Log Storage | 0 |
-| LM-2 | Tamper-Resistant Log Storage | 0 |
-| LM-3 | Network Flow Logging | 0 |
-| LM-4 | Audit Logging | 0 |
-| LM-5 | Database Logging | 0 |
-| LM-6 | Access Logging | 0 |
-| LM-7 | Host Security Event Logging | 0 |
-| LM-8 | Security Log Retention | 0 |
-| LM-9 | Security Monitoring and Alerting | 0 |
+| LM-1 | Separate Log Storage | 1 |
+| LM-2 | Tamper-Resistant Log Storage | 1 |
+| LM-3 | Network Flow Logging | 1 |
+| LM-4 | Audit Logging | 1 |
+| LM-5 | Database Logging | 1 |
+| LM-6 | Access Logging | 1 |
+| LM-7 | Host Security Event Logging | 1 |
+| LM-8 | Security Log Retention | 1 |
+| LM-9 | Security Monitoring and Alerting | 1 |
 | LM-10 | Resource Usage Monitoring and Alerting | 1 |
 | LM-11 | Service Level Monitoring and Alerting | 1 |
 | LM-12 | Central Security Log Management and Monitoring | 0 |
-| LM-13 | Anomalous Database Activity Monitoring | 0 |
+| LM-13 | Anomalous Database Activity Monitoring | 1 |
 | LM-14 | Web Defacement Monitoring | 1 |
 | LM-15 | Structured Log Formatting | 1 |
 | LM-16 | Key Signals Monitoring | 2 |
@@ -385,8 +387,8 @@ Controls (137):
 | LM-19 | Log Sanitisation | 1 |
 | LM-21 | Detection Updates | 1 |
 | **AC: Access Control** | | |
-| AC-1 | Principle of Least Privilege | 0 |
-| AC-2 | Multi-Factor Authentication (MFA) | 0 |
+| AC-1 | Principle of Least Privilege | 1 |
+| AC-2 | Multi-Factor Authentication (MFA) | 1 |
 | AC-3 | Inactive and Expired Accounts | 0 |
 | AC-4 | Access Review | 1 |
 | AC-5 | Endpoint Device Hardening | 0 |
@@ -418,17 +420,17 @@ Controls (137):
 | PM-3 | System Security Plan (SSP) Development | 0 |
 | PM-4 | Approval of Residual Risks | 0 |
 | PM-5 | Central Submission of Approved System Security Plan (SSP) | 0 |
-| PM-6 | System Documentation | 0 |
+| PM-6 | System Documentation | 1 |
 | PM-9 | Cybersecurity Incident Response Testing | 0 |
 | PM-10 | Cybersecurity Leadership and Oversight | 0 |
 | **IS: Infrastructure Security** | | |
 | IS-1 | Management Agents | 1 |
 | IS-2 | Automated Patch Management Tools | 1 |
-| IS-3 | Restricted Administrator Privileges | 0 |
+| IS-3 | Restricted Administrator Privileges | 1 |
 | IS-4 | Least Functionality | 1 |
-| IS-5 | Host System Hardening | 0 |
+| IS-5 | Host System Hardening | 1 |
 | IS-6 | Remote Administration | 1 |
-| IS-7 | Malware Protection | 0 |
+| IS-7 | Malware Protection | 1 |
 | IS-8 | Endpoint Detection and Response (EDR) | 1 |
 | IS-9 | End-of-Support (EOS) Assets | 1 |
 | IS-10 | Synchronise time clocks | 1 |
@@ -436,41 +438,42 @@ Controls (137):
 | IS-12 | DNS Security Extensions (DNSSEC) | 1 |
 | IS-13 | Defensive Domain Name Registration | 1 |
 | IS-14 | Singapore SMS Sender ID Registry Registration | 2 |
+| IS-15 | Official URL shorteners | 1 |
 | **SD: Secure Development** | | |
 | SD-1 | Push Protection for Secrets | 1 |
 | SD-2 | Default Branch Push Permissions | 1 |
 | SD-3 | Continuous Integration (CI) Tests | 1 |
 | SD-4 | Static Analysis | 1 |
 | SD-5 | Dependency Scanning | 1 |
-| SD-6 | Secret Detection | 0 |
+| SD-6 | Secret Detection | 1 |
 | SD-7 | CI Environment Variable Secrets Management | 1 |
-| SD-8 | Deployment Environment Segregation | 0 |
+| SD-8 | Deployment Environment Segregation | 1 |
 | SD-9 | Dynamic Analysis | 2 |
 | SD-10 | Secure Software Development Lifecycle (SSDLC) | 1 |
 | **CK: Cryptography, Encryption and Key Management** | | |
-| CK-1 | Cryptographic Key Establishment | 0 |
+| CK-1 | Cryptographic Key Establishment | 1 |
 | CK-2 | Cryptographic Key Rotation | 1 |
 | CK-3 | Cryptographic Key Management | 1 |
-| CK-4 | Cryptographic Key Storage | 0 |
+| CK-4 | Cryptographic Key Storage | 1 |
 | **HR: Human Resource** | | |
-| HR-1 | Security Awareness Training | 0 |
+| HR-1 | Security Awareness Training | 1 |
 | HR-2 | Security Screening of Employees | 1 |
 | HR-3 | Employee Termination Process | 1 |
 | **RS: Resiliency** | | |
-| RS-1 | Multi-AZ Deployment | 0 |
+| RS-1 | Multi-AZ Deployment | 1 |
 | RS-2 | Dynamic Resource Scaling | 1 |
 | RS-3 | Load Testing | 2 |
 
 ## Low-Risk On Premises
 
 Source: https://info.standards.tech.gov.sg/ssp/low-risk-on-premises/
-Page last updated: 24 March 2026
+Page last updated: 19 October 2026
 
 System category: A generic system hosted on-premises.
 
 Sensitivity ceiling: Up to Restricted, Sensitive Normal
 
-Controls (103):
+Controls (104):
 
 | ID | Title | Profile level |
 | --- | --- | --- |
@@ -481,7 +484,7 @@ Controls (103):
 | AS-4 | Authentication Mechanism Rate-Limiting | 1 |
 | AS-5 | Password Requirements | 1 |
 | AS-6 | Password Salting and Hashing | 1 |
-| AS-7 | Access Control Check Enforcement | 1 |
+| AS-7 | Access Control Check Enforcement | 0 |
 | AS-8 | Secrets Management | 1 |
 | AS-9 | Content Security Policy (CSP) | 1 |
 | AS-10 | HTTP Strict Transport Security (HSTS) | 2 |
@@ -543,10 +546,10 @@ Controls (103):
 | **AC: Access Control** | | |
 | AC-1 | Principle of Least Privilege | 1 |
 | AC-2 | Multi-Factor Authentication (MFA) | 1 |
-| AC-3 | Inactive and Expired Accounts | 1 |
+| AC-3 | Inactive and Expired Accounts | 0 |
 | AC-4 | Access Review | 1 |
-| AC-5 | Endpoint Device Hardening | 1 |
-| AC-6 | Default Credentials | 1 |
+| AC-5 | Endpoint Device Hardening | 0 |
+| AC-6 | Default Credentials | 0 |
 | AC-7 | Singpass/Corppass for Public Users | 1 |
 | AC-8 | Automated Account Lifecycle Management | 1 |
 | AC-9 | Endpoint Device Management | 1 |
@@ -556,8 +559,8 @@ Controls (103):
 | AC-13 | Static Credential Expiry and Rotation | 2 |
 | AC-14 | Inventory of Accounts | 1 |
 | **PM: Security Programme Management** | | |
-| PM-1 | Cybersecurity Incident Management Plan | 1 |
-| PM-2 | Risk Assessment | 1 |
+| PM-1 | Cybersecurity Incident Management Plan | 0 |
+| PM-2 | Risk Assessment | 0 |
 | PM-3 | System Security Plan (SSP) Development | 0 |
 | PM-4 | Approval of Residual Risks | 0 |
 | PM-5 | Central Submission of Approved System Security Plan (SSP) | 0 |
@@ -575,6 +578,7 @@ Controls (103):
 | IS-12 | DNS Security Extensions (DNSSEC) | 2 |
 | IS-13 | Defensive Domain Name Registration | 2 |
 | IS-14 | Singapore SMS Sender ID Registry Registration | 0 |
+| IS-15 | Official URL shorteners | 1 |
 | **SD: Secure Development** | | |
 | SD-1 | Push Protection for Secrets | 1 |
 | SD-2 | Default Branch Push Permissions | 1 |
@@ -594,7 +598,7 @@ Controls (103):
 ## Generative AI
 
 Source: https://info.standards.tech.gov.sg/ssp/gen-ai/
-Page last updated: 24 March 2026
+Page last updated: 19 October 2026
 
 System category: A generic system that utilises generative AI models.
 
@@ -604,8 +608,6 @@ Controls (9):
 
 | ID | Title | Profile level |
 | --- | --- | --- |
-| **DP: Data Protection** | | |
-| DP-8 | Data Classification Disclosure | 1 |
 | **GA: Generative AI** | | |
 | GA-1 | Overseas-hosted GenAI API services | 0 |
 | GA-2 | Singapore-hosted GenAI API services | 0 |
@@ -615,11 +617,13 @@ Controls (9):
 | GA-6 | File upload safeguards | 1 |
 | GA-7 | Evaluation of GenAI accuracy, safety, and output quality | 1 |
 | GA-8 | Inform users about GenAI risks and limitations | 1 |
+| **DP: Data Protection** | | |
+| DP-8 | Data Classification Disclosure | 1 |
 
 ## Digital Services (High Impact)
 
 Source: https://info.standards.tech.gov.sg/ssp/dss-high/
-Page last updated: 26 March 2026
+Page last updated: 19 October 2026
 
 System category: A system that has digital services with high impact.
 
@@ -734,7 +738,7 @@ Controls (92):
 ## Digital Services (Others)
 
 Source: https://info.standards.tech.gov.sg/ssp/dss-others/
-Page last updated: 26 March 2026
+Page last updated: 19 October 2026
 
 System category: A system that has digital services.
 

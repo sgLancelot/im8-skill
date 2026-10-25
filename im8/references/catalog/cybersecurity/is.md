@@ -2,7 +2,7 @@
 
 <!-- generated-by: scripts/sync_oscal.py (OSCAL sync, GovTechSG/tech-standards) -->
 
-Family code: `is` | Controls: 14
+Family code: `is` | Controls: 15
 
 Controls to secure infrastructure that host applications, services, and data.
 
@@ -149,3 +149,15 @@ Controls to secure infrastructure that host applications, services, and data.
 **Guidance:** Agencies must use the "gov.sg" Sender ID via the Postman tool to send SMSes to members of the public unless exempted. Whitelist Sender IDs used to send SMSes and blacklist Sender IDs which are variants of the whitelisted Sender IDs, agency names, or names of services.
 
 **Risk statement:** Lack of Sender ID registration allows malicious entities to spoof legitimate Government SMSes.
+
+## IS-15 — Official URL shorteners
+
+**Levels:** low-risk cloud: L1, medium-risk cloud: L1, high-risk cloud CII: L1, low-risk on-prem: L1 *(portal; this control was added on 19 Oct 2026 and is not yet in the OSCAL release)*
+
+**Statement:** Only use Go.gov.sg URL shortener to shorten URLs. Education Institutions may use for.edu.sg.
+
+**Guidance:** Shorten long URLs with the official government URL shorteners.
+
+**Risk statement:** These URL shorteners are controlled and a good indicator of credibility of the website. Assures users that they are accessing a legitimate link.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/is/

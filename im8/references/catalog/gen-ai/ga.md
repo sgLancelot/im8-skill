@@ -1,7 +1,7 @@
 # Generative AI (GA)
 
-Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/ga/
-Page last updated: 24 March 2026
+Source: https://info.standards.tech.gov.sg/control-catalog/gen-ai/ga/
+Page last updated: 19 October 2026
 
 Content © Government Technology Agency of Singapore, snapshotted from the public portal for grounding; canonical source is the live portal.
 

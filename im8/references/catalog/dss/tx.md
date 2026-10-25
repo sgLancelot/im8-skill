@@ -1,7 +1,7 @@
 # Transactions and Payments (TX)
 
 Source: https://info.standards.tech.gov.sg/control-catalog/dss/tx/
-Page last updated: 5 March 2026
+Page last updated: 19 October 2026
 
 Content © Government Technology Agency of Singapore, snapshotted from the public portal for grounding; canonical source is the live portal.
 
@@ -13,9 +13,11 @@ Design digital transactions to be fully digital from start to finish, unless oth
 
 ### Recommendations
 
-Avoid requiring non-digital interactions such as physical signatures, paper-based approvals, or in-person submissions as part of a digital service.
+Avoid requiring non-digital interactions such as physical signatures, paper-based approvals, or in-person submissions as part of a digital service unless legally required.
 
-Implement digital signature solutions such as Singpass, and enable common digital payment methods like credit card and Paynow.
+Agencies may still provide non-digital options as alternative channels for inclusivity, provided the default user flow for the digital service is fully digital.
+
+Implement digital signature solutions (OES or SES), and enable common digital payment methods like credit card and Paynow.
 
 ### Rationale
 

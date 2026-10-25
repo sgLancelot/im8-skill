@@ -16,9 +16,11 @@ This skill carries a **full local snapshot of the published control catalog** in
 The snapshot has two parts, with different provenance:
 
 - `catalog/cybersecurity/` (most families) — generated from GovTech's official MIT-licensed OSCAL repo (github.com/GovTechSG/tech-standards, release version in `catalog/SNAPSHOT-OSCAL.md`).
-- `catalog/cybersecurity/{ga,hr,rs}.md`, `catalog/dss/`, and `catalog/ssp-baselines.md` — snapshotted from the live portal (page dates in `catalog/SNAPSHOT-PORTAL.md`).
+- `catalog/cybersecurity/{hr,rs}.md`, `catalog/gen-ai/ga.md` (Generative AI has its own catalog section on the portal since 19 Oct 2026), `catalog/dss/`, and `catalog/ssp-baselines.md` — snapshotted from the live portal (page dates in `catalog/SNAPSHOT-PORTAL.md`).
 
-**The live portal, https://info.standards.tech.gov.sg/, remains the ONLY canonical authority.** The snapshot is a cache of it, not a rival. Note the two sources genuinely differ today: the OSCAL release lags the portal (it lacks the GA/HR/RS families and reflects an older version stamp). On any conflict — snapshot vs portal, OSCAL vs portal — **the live portal wins**.
+**For profile levels, `catalog/ssp-baselines.md` is authoritative** — it is portal-sourced. The `Levels:` lines inside the OSCAL-derived family files reflect the older OSCAL release and can differ.
+
+**The live portal, https://info.standards.tech.gov.sg/, remains the ONLY canonical authority.** The snapshot is a cache of it, not a rival. Note the two sources genuinely differ today: the OSCAL release lags the portal (it lacks the GA/HR/RS families and some newer controls, and reflects an older version stamp). On any conflict — snapshot vs portal, OSCAL vs portal — **the live portal wins**.
 
 ## Non-negotiable grounding rules
 
