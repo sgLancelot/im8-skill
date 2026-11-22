@@ -1,6 +1,6 @@
 ---
 name: im8
-description: Answers questions about Singapore's IM8 reform — the risk-based ICT&SS governance framework now openly published at info.standards.tech.gov.sg — including SSP templates, control catalogs (cybersecurity + digital service standards), profile levels, hygiene requirements vs guidelines, system risk categories, and the OSCAL machine-readable controls on GitHub. Use this skill whenever the user mentions IM8, IM8 reform, ICT&SS policy reform, SSP, System Security Plan, control catalog, GCC, Singapore government compliance/controls, or asks what a Singapore public sector system must comply with — even if they don't name a specific document.
+description: Answers questions about Singapore's IM8 reform — the risk-based ICT&SS governance framework now openly published at info.standards.tech.gov.sg — including SSP templates, control catalogs (cybersecurity, generative AI, organisational, digital service standards), profile levels, hygiene requirements vs guidelines, system risk categories (cloud, on-premises, SaaS, GenAI, digital services, sandbox), and the OSCAL machine-readable controls on GitHub. Use this skill whenever the user mentions IM8, IM8 reform, ICT&SS policy reform, SSP, System Security Plan, control catalog, GCC, Singapore government compliance/controls, or asks what a Singapore public sector system must comply with — even if they don't name a specific document.
 ---
 
 # IM8 Reform / Singapore Government ICT&SS Standards (Grounded)
@@ -15,12 +15,12 @@ This skill carries a **full local snapshot of the published control catalog** in
 
 The snapshot has two parts, with different provenance:
 
-- `catalog/cybersecurity/` (most families) — generated from GovTech's official MIT-licensed OSCAL repo (github.com/GovTechSG/tech-standards, release version in `catalog/SNAPSHOT-OSCAL.md`).
-- `catalog/cybersecurity/{hr,rs}.md`, `catalog/gen-ai/ga.md` (Generative AI has its own catalog section on the portal since 19 Oct 2026), `catalog/dss/`, and `catalog/ssp-baselines.md` — snapshotted from the live portal (page dates in `catalog/SNAPSHOT-PORTAL.md`).
+- `catalog/cybersecurity/` (most families) — generated from GovTech's official MIT-licensed OSCAL repo (github.com/GovTechSG/tech-standards, release version in `catalog/SNAPSHOT-OSCAL.md`; not updated since Sep 2025). Entries whose `Levels:` line is marked *(portal …)* were updated from the live portal.
+- `catalog/cybersecurity/{hr,rs,sa}.md`, `catalog/gen-ai/ga.md` (Generative AI has its own catalog section on the portal), `catalog/organisational/tp.md` (Third Party Management, in the portal's Organisational section since 10 Nov 2026), `catalog/dss/`, and `catalog/ssp-baselines.md` — snapshotted from the live portal (page dates in `catalog/SNAPSHOT-PORTAL.md`).
 
 **For profile levels, `catalog/ssp-baselines.md` is authoritative** — it is portal-sourced. The `Levels:` lines inside the OSCAL-derived family files reflect the older OSCAL release and can differ.
 
-**The live portal, https://info.standards.tech.gov.sg/, remains the ONLY canonical authority.** The snapshot is a cache of it, not a rival. Note the two sources genuinely differ today: the OSCAL release lags the portal (it lacks the GA/HR/RS families and some newer controls, and reflects an older version stamp). On any conflict — snapshot vs portal, OSCAL vs portal — **the live portal wins**.
+**The live portal, https://info.standards.tech.gov.sg/, remains the ONLY canonical authority.** The snapshot is a cache of it, not a rival. Note the two sources genuinely differ today: the OSCAL release lags the portal (it lacks the GA, HR, RS and SA families and many newer controls, numbers its Third Party Management controls differently from the portal, and reflects an older version stamp). On any conflict — snapshot vs portal, OSCAL vs portal — **the live portal wins**.
 
 ## Non-negotiable grounding rules
 
@@ -33,8 +33,8 @@ The snapshot has two parts, with different provenance:
 ## Workflow
 
 1. Classify the question:
-   - **"What must my system comply with?"** → identify the system category (low/medium-risk cloud, high-risk cloud CII, low-risk on-prem, GenAI, digital services high/others, sandbox) → `catalog/ssp-baselines.md` for its control list and levels, then the family files for control text.
-   - **A specific control or topic** (e.g., logging, container security, WCAG) → the family file in `catalog/cybersecurity/` or `catalog/dss/` (find codes in `catalog/cybersecurity/INDEX.md` and `references/portal-map.md`).
+   - **"What must my system comply with?"** → identify the system category (low/medium-risk cloud, high-risk cloud CII, low-risk on-prem, low/medium-risk SaaS, GenAI, digital services high/others, sandbox) → `catalog/ssp-baselines.md` for its control list and levels, then the family files for control text.
+   - **A specific control or topic** (e.g., logging, container security, WCAG) → the family file in `catalog/cybersecurity/`, `catalog/gen-ai/`, `catalog/organisational/` or `catalog/dss/` (find codes in `catalog/cybersecurity/INDEX.md` and `references/portal-map.md`).
    - **"How does the reform work?"** (levels, hygiene vs guideline, SSP customisation, deviation) → `references/reform-explainer.md`.
    - **Machine-readable / automation questions** → the OSCAL repo structure notes in `references/portal-map.md`, with the lag caveat stated.
 2. Verify live when possible (rule 2), answer, cite portal URLs.

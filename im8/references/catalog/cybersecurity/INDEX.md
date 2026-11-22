@@ -21,7 +21,9 @@
 | IS | Infrastructure Security | 14 | [is.md](./is.md) |
 | SD | Secure Development | 8 | [sd.md](./sd.md) |
 | DC | Datacentre | 2 | [dc.md](./dc.md) |
-| TP | Third Party Management | 6 | [tp.md](./tp.md) |
+| TP | Third Party Management | 6 | moved — see [../organisational/tp.md](../organisational/tp.md) (portal; 1 control) |
 | CK | Cryptography, Encryption and Key Management | 3 | [ck.md](./ck.md) |
 
 **Totals:** 15 families, 137 controls.
+
+This index lists the OSCAL release only. Families published on the portal but not in that release: GA ([../gen-ai/ga.md](../gen-ai/ga.md)), HR ([hr.md](./hr.md)), RS ([rs.md](./rs.md)), SA — SaaS Security ([sa.md](./sa.md)). Third Party Management now lives in the portal's Organisational section ([../organisational/tp.md](../organisational/tp.md)); the OSCAL release's TP control numbers do not match the portal's.

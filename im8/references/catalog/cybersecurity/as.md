@@ -2,7 +2,7 @@
 
 <!-- generated-by: scripts/sync_oscal.py (OSCAL sync, GovTechSG/tech-standards) -->
 
-Family code: `as` | Controls: 14
+Family code: `as` | Controls: 15
 
 Controls to prevent application vulnerabilities caused by insecure coding.
 
@@ -63,19 +63,21 @@ Controls to prevent application vulnerabilities caused by insecure coding.
 
 ## AS-6 — Password Salting and Hashing
 
-**Levels:** low-risk: L1, medium-risk: L1
+**Levels:** low-risk cloud: L1, medium-risk cloud: L1, high-risk cloud CII: L1, low-risk on-prem: L1, low-risk SaaS: L1, medium-risk SaaS: L1, sandbox: L2 *(portal text as of 10 November 2026)*
 
-**Statement:** Store passwords as salted hashes using a password hashing scheme that is resistant to offline attacks such as those described in NIST [SP 800-63b](#e59c5a7c-8b1f-49ca-8de0-6ee0882180ce). The salt should be:
+**Statement:** Store passwords as salted hashes using a password hashing scheme that is resistant to offline attacks such as those described in NIST SP 800-63b. The salt should be:
 
-1 Generated using a cryptographically secure pseudo-random number generator in accordance with industry standards;
+Generated using a cryptographically secure pseudo-random number generator in accordance with industry standards;
 
-2 At least 32 bits long; and
+At least 32 bits long; and
 
-3 Randomly generated for each account.
+Randomly generated for each account.
 
-**Guidance:** Refer to NIST [SP 800-90Ar1](#64357b22-9868-4453-9b9e-36c2665d12b3) for suitable pseudo-random number generators. Refer to NIST [SP 800-63b](#e59c5a7c-8b1f-49ca-8de0-6ee0882180ce) Memorized Secret Verifiers section for suitable hashing schemes, including Argon2, scrypt, and PBKDF2. For application source code, use a cryptographically secure pseudo-random number generator function instead of an insecure one, such as crypto.randomBytes instead of Math.random in Node.js and java.security.SecureRandom.nextBytes instead of java.util.Random in Java.
+**Guidance:** Refer to NIST SP 800-90Ar1 for suitable pseudo-random number generators. Refer to NIST SP 800-63b Memorized Secret Verifiers section for suitable hashing schemes, like PBKDF2. For application source code, use a cryptographically secure pseudo-random number generator function instead of an insecure one, such as crypto.randomBytes instead of Math.random in Node.js and java.security.SecureRandom.nextBytes instead of java.util.Random in Java.
 
-**Risk statement:** Without salting and hashing, in case of a data breach, exposed passwords can be easily extracted, leading to potential compromise of user accounts and sensitive information.
+**Risk statement:** Without salting and hashing, in case of a data breach, exposed passwords can be easily extracted, leading to potential compromise of accounts and sensitive information.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/as/
 
 ## AS-7 — Access Control Check Enforcement
 
@@ -160,3 +162,15 @@ Controls to prevent application vulnerabilities caused by insecure coding.
 **Guidance:** Follow the OWASP Cryptographic Storage Cheat Sheet for best practices in securely implementing cryptographic operations. Regularly update libraries and prefer widely recognized ones such as OpenSSL. Consider using libraries that are FIPS 140-2 or FIPS 140-3 compliant for enhanced security assurance.
 
 **Risk statement:** Using insecure cryptographic libraries and functions can expose applications to significant security risks, such as data breaches and unauthorised access, compromising sensitive information.
+
+## AS-15 — Password Change
+
+**Levels:** low-risk cloud: L1, medium-risk cloud: L1, high-risk cloud CII: L1, low-risk on-prem: L1, low-risk SaaS: L1, medium-risk SaaS: L1, sandbox: L2 *(portal; portal control, not in the OSCAL release)*
+
+**Statement:** Enforce password change upon suspected account compromise.
+
+**Guidance:** Implement mechanisms to detect signs of account compromise, such as unusual login activity or multiple failed login attempts. Notify users promptly to change their passwords and provide guidance on creating strong, unique passwords. Consider integrating multi-factor authentication to enhance security.
+
+**Risk statement:** Failure to enforce password changes upon suspected account compromise increases the risk of prolonged unauthorised access, leading to potential data breaches and exploitation of systems.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/as/

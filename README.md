@@ -10,7 +10,7 @@ That openness is a genuinely significant shift, and this skill is built to help 
 
 ## How it works
 
-The skill ships with a **complete snapshot of the published catalog** in [`im8/references/catalog/`](im8/references/catalog/) — every control's statement, guidance, and risk statement across the cybersecurity and digital-service-standards catalogs, plus each SSP baseline's control list with profile levels. Answers come from this snapshot first, which makes them fast and reliable even where live web access is limited.
+The skill ships with a **complete snapshot of the published catalog** in [`im8/references/catalog/`](im8/references/catalog/) — every control's statement, guidance, and risk statement across the cybersecurity, generative AI, organisational and digital-service-standards catalogs, plus each SSP baseline's control list with profile levels. Answers come from this snapshot first, which makes them fast and reliable even where live web access is limited.
 
 The snapshot is a cache, not a rival authority. When the skill *can* reach the web, it verifies against the live portal before answering — and **the live portal always wins on conflict**. When it can't, it says so, and tells you the snapshot's date. Provenance for every file is recorded in the two `SNAPSHOT-*.md` manifests: most cybersecurity families derive from GovTech's MIT-licensed OSCAL release, and the remainder (plus the DSS catalog and SSP baselines) from the public portal pages, each tagged with its on-page "last updated" date. The snapshot is refreshed as the official sources change.
 

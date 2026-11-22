@@ -18,11 +18,11 @@ Controls to implement cybersecurity governance, risk, and compliance processes a
 
 ## PM-2 — Risk Assessment
 
-**Levels:** low-risk: L1, medium-risk: L1
+**Levels:** low-risk cloud: L0, medium-risk cloud: L0, high-risk cloud CII: L0, low-risk on-prem: L0, low-risk SaaS: L0, medium-risk SaaS: L0, sandbox: L2 *(portal text as of 10 November 2026)*
 
-**Statement:** Develop and document a risk assessment by [system owner] and get it approved by [risk assessment approver] prior to [SaaS subscription / initial full release] and conduct a review every [time period (days)] day(s).
+**Statement:** Develop and document a risk assessment by [system owner] and get it approved by [risk assessment approver] prior to [risk assessment use case] and conduct a review every [time period (days)] day(s).
 
-**Guidance:** The Risk Assessment should cover Cyber Risk, Data Risk, Resiliency Risk, Business Risk, Project Risk, Offshore Risk and other types of risk where applicable.
+**Guidance:** The Risk Assessment should cover Cyber Risk, Data Risk, Resiliency Risk, Business Risk, Project Risk, Offshore Risk and other types of risk.
 
 **Risk statement:** Without developing and documenting risk assessment before the initial full release, there's an increased risk of overlooking potential security threats, vulnerabilities, and regulatory compliance issues, compromising the overall security posture of the system.
 
@@ -30,8 +30,10 @@ Controls to implement cybersecurity governance, risk, and compliance processes a
 
 - `pm-2_prm_1` — system owner (type: str) — The owner of the system.
 - `pm-2_prm_2` — risk assessment approver (type: str) — The approver of the risk assessment.
-- `pm-2_prm_3` — risk assessment use case (type: str) — choose one: SaaS subscription; initial full release The use case of the risk assessment.
+- `pm-2_prm_3` — risk assessment use case (type: str) — The use case of the risk assessment.
 - `pm-2_prm_4` — time period (days) (type: int) — The time period in days for risk assessment.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/pm/
 
 ## PM-3 — System Security Plan (SSP) Development
 
@@ -93,14 +95,16 @@ Controls to implement cybersecurity governance, risk, and compliance processes a
 
 ## PM-8 — SaaS Whitelisting
 
-**Levels:** low-risk: not in baseline, medium-risk: not in baseline
+**Levels:** medium-risk SaaS: L0 *(portal text as of 10 November 2026)*
 
-**Statement:** Maintain and enforce a whitelist of authorised software and services.
+**Statement:** Seek whitelisting assessment by [whitelisting authority] before using or subscribing to the service.
 
-**Guidance:** Refer to a centrally-maintained whitelist or [whitelisting authority] for authorised SaaS.
+**Guidance:** Refer to a centrally-maintained whitelist or [ insert: param, pm-8_prm_1 ] for authorised SaaS.
 
 **Risk statement:** Failing to whitelist the SaaS may potentially expose sensitive data (e.g., Confidential (Cloud-Eligible) or SENSITIVE-HIGH data) to the risk of data breaches.
 
 **Parameters:**
 
 - `pm-8_prm_1` — whitelisting authority (type: str) — The whitelisting authority.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/pm/

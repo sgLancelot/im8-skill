@@ -10,7 +10,7 @@ Content © Government Technology Agency of Singapore, snapshotted from the publi
 ## Low-Risk Cloud
 
 Source: https://info.standards.tech.gov.sg/ssp/low-risk-cloud/
-Page last updated: 19 October 2026
+Page last updated: 19 November 2026
 
 System category: A generic system hosted on the cloud through a third-party Cloud Service Provider.
 
@@ -155,7 +155,7 @@ Controls (118):
 ## Medium-Risk Cloud
 
 Source: https://info.standards.tech.gov.sg/ssp/medium-risk-cloud/
-Page last updated: 19 October 2026
+Page last updated: 19 November 2026
 
 System category: A generic system hosted on the cloud through a third-party Cloud Service Provider.
 
@@ -300,7 +300,7 @@ Controls (118):
 ## High-Risk Cloud CII
 
 Source: https://info.standards.tech.gov.sg/ssp/high-risk-cloud/
-Page last updated: 19 October 2026
+Page last updated: 19 November 2026
 
 System category: A generic system hosted on the cloud through a third-party Cloud Service Provider.
 
@@ -467,7 +467,7 @@ Controls (138):
 ## Low-Risk On Premises
 
 Source: https://info.standards.tech.gov.sg/ssp/low-risk-on-premises/
-Page last updated: 19 October 2026
+Page last updated: 19 November 2026
 
 System category: A generic system hosted on-premises.
 
@@ -595,28 +595,187 @@ Controls (104):
 | CK-1 | Cryptographic Key Establishment | 2 |
 | CK-2 | Cryptographic Key Rotation | 2 |
 
+## Low-Risk Software as a Service (SaaS)
+
+Source: https://info.standards.tech.gov.sg/ssp/low-risk-saas/
+Page last updated: 19 November 2026
+
+System category: A generic system hosted on the cloud by a third-party service provider.
+
+Sensitivity ceiling: Restricted, Sensitive Normal
+
+Controls (50):
+
+| ID | Title | Profile level |
+| --- | --- | --- |
+| **AS: Application Security** | | |
+| AS-5 | Password Requirements | 1 |
+| AS-6 | Password Salting and Hashing | 1 |
+| AS-15 | Password Change | 1 |
+| **ST: Security Testing** | | |
+| ST-1 | Vulnerability Assessment | 2 |
+| ST-4 | Security Testing Programme | 2 |
+| **BR: Backup and Recovery** | | |
+| BR-1 | Backup | 1 |
+| BR-2 | Recovery Testing | 2 |
+| **DP: Data Protection** | | |
+| DP-2 | Data at Rest Encryption | 1 |
+| DP-3 | Data in Transit Encryption | 1 |
+| DP-8 | Data Classification Disclosure | 1 |
+| DP-10 | Secure Data Wipe and Verification | 1 |
+| **LM: Logging and Monitoring** | | |
+| LM-2 | Tamper-Resistant Log Storage | 1 |
+| LM-4 | Audit Logging | 1 |
+| LM-9 | Security Monitoring and Alerting | 1 |
+| LM-12 | Central Security Log Management and Monitoring | 1 |
+| LM-19 | Log Sanitisation | 1 |
+| **AC: Access Control** | | |
+| AC-1 | Principle of Least Privilege | 1 |
+| AC-2 | Multi-Factor Authentication (MFA) | 1 |
+| AC-3 | Inactive and Expired Accounts | 1 |
+| AC-4 | Access Review | 1 |
+| AC-6 | Default Credentials | 1 |
+| AC-14 | Inventory of Accounts | 1 |
+| AC-18 | Unauthorised Accounts | 1 |
+| AC-19 | Account Provisioning Control Validation | 1 |
+| AC-20 | Account Deprovisioning Control Validation | 1 |
+| AC-21 | Access Authorisation Control Validation | 1 |
+| AC-22 | Access Rights Binding Control Validation | 1 |
+| AC-23 | Password Reuse Restrictions | 1 |
+| AC-24 | Account Lockout on Failed Authentication Attempts | 1 |
+| **PM: Security Programme Management** | | |
+| PM-2 | Risk Assessment | 0 |
+| PM-3 | System Security Plan (SSP) Development | 0 |
+| PM-4 | Approval of Residual Risks | 0 |
+| PM-5 | Central Submission of Approved System Security Plan (SSP) | 0 |
+| PM-7 | Certification | 1 |
+| **SA: SaaS Security** | | |
+| SA-1 | Supplier Assessments and Reviews | 0 |
+| SA-2 | SaaS Account Management Tool Validation Testing | 1 |
+| SA-3 | SaaS WOG Credential Storage Restriction | 1 |
+| SA-4 | SaaS Provider Encryption or Bring Your Own Key (BYOK) | 1 |
+| **GA: Generative AI** | | |
+| GA-10 | External AI SaaS - Data classification | 0 |
+| GA-14 | Application safeguards - File uploads | 1 |
+| GA-15 | Application safeguards - Consequential actions | 1 |
+| GA-16 | Application safeguards - Handling of web content | 1 |
+| GA-17 | Application safeguards - Provenance of web content | 1 |
+| GA-18 | Application safeguards - Accuracy of output and actions | 1 |
+| GA-19 | Application safeguards - Safety of output and actions | 1 |
+| GA-20 | Application safeguards - Quality of output and actions | 1 |
+| GA-21 | Deployment and use - Disclaimers on beta status | 2 |
+| GA-22 | Deployment and use - Disclaimers on risks and limitations | 2 |
+| GA-23 | Deployment and use - Risk acceptance and approval | 0 |
+| **TP: Third Party Management** | | |
+| TP-4 | Contracts to Govern Third-Party Scope and Responsibilities | 1 |
+
+## Medium-Risk Software as a Service (SaaS)
+
+Source: https://info.standards.tech.gov.sg/ssp/medium-risk-saas/
+Page last updated: 19 November 2026
+
+System category: A generic system hosted on the cloud by a third-party service provider.
+
+Sensitivity ceiling: Confidential (Cloud-Eligible), Sensitive High
+
+Controls (54):
+
+| ID | Title | Profile level |
+| --- | --- | --- |
+| **AS: Application Security** | | |
+| AS-5 | Password Requirements | 1 |
+| AS-6 | Password Salting and Hashing | 1 |
+| AS-15 | Password Change | 1 |
+| **ST: Security Testing** | | |
+| ST-1 | Vulnerability Assessment | 2 |
+| ST-4 | Security Testing Programme | 2 |
+| **BR: Backup and Recovery** | | |
+| BR-1 | Backup | 1 |
+| BR-2 | Recovery Testing | 2 |
+| **DP: Data Protection** | | |
+| DP-2 | Data at Rest Encryption | 1 |
+| DP-3 | Data in Transit Encryption | 1 |
+| DP-8 | Data Classification Disclosure | 1 |
+| DP-10 | Secure Data Wipe and Verification | 1 |
+| **LM: Logging and Monitoring** | | |
+| LM-2 | Tamper-Resistant Log Storage | 1 |
+| LM-4 | Audit Logging | 1 |
+| LM-9 | Security Monitoring and Alerting | 1 |
+| LM-12 | Central Security Log Management and Monitoring | 1 |
+| LM-19 | Log Sanitisation | 1 |
+| **AC: Access Control** | | |
+| AC-1 | Principle of Least Privilege | 1 |
+| AC-2 | Multi-Factor Authentication (MFA) | 1 |
+| AC-3 | Inactive and Expired Accounts | 1 |
+| AC-4 | Access Review | 1 |
+| AC-6 | Default Credentials | 1 |
+| AC-14 | Inventory of Accounts | 1 |
+| AC-18 | Unauthorised Accounts | 1 |
+| AC-19 | Account Provisioning Control Validation | 1 |
+| AC-20 | Account Deprovisioning Control Validation | 1 |
+| AC-21 | Access Authorisation Control Validation | 1 |
+| AC-22 | Access Rights Binding Control Validation | 1 |
+| AC-23 | Password Reuse Restrictions | 1 |
+| AC-24 | Account Lockout on Failed Authentication Attempts | 1 |
+| **PM: Security Programme Management** | | |
+| PM-2 | Risk Assessment | 0 |
+| PM-3 | System Security Plan (SSP) Development | 0 |
+| PM-4 | Approval of Residual Risks | 0 |
+| PM-5 | Central Submission of Approved System Security Plan (SSP) | 0 |
+| PM-7 | Certification | 1 |
+| PM-8 | SaaS Whitelisting | 0 |
+| **CK: Cryptography, Encryption and Key Management** | | |
+| CK-2 | Cryptographic Key Rotation | 2 |
+| CK-3 | Cryptographic Key Management | 2 |
+| **SA: SaaS Security** | | |
+| SA-1 | Supplier Assessments and Reviews | 0 |
+| SA-2 | SaaS Account Management Tool Validation Testing | 1 |
+| SA-3 | SaaS WOG Credential Storage Restriction | 1 |
+| SA-4 | SaaS Provider Encryption or Bring Your Own Key (BYOK) | 1 |
+| SA-5 | Attestation Report Review | 1 |
+| **GA: Generative AI** | | |
+| GA-10 | External AI SaaS - Data classification | 0 |
+| GA-14 | Application safeguards - File uploads | 1 |
+| GA-15 | Application safeguards - Consequential actions | 1 |
+| GA-16 | Application safeguards - Handling of web content | 1 |
+| GA-17 | Application safeguards - Provenance of web content | 1 |
+| GA-18 | Application safeguards - Accuracy of output and actions | 1 |
+| GA-19 | Application safeguards - Safety of output and actions | 1 |
+| GA-20 | Application safeguards - Quality of output and actions | 1 |
+| GA-21 | Deployment and use - Disclaimers on beta status | 2 |
+| GA-22 | Deployment and use - Disclaimers on risks and limitations | 2 |
+| GA-23 | Deployment and use - Risk acceptance and approval | 0 |
+| **TP: Third Party Management** | | |
+| TP-4 | Contracts to Govern Third-Party Scope and Responsibilities | 1 |
+
 ## Generative AI
 
 Source: https://info.standards.tech.gov.sg/ssp/gen-ai/
-Page last updated: 19 October 2026
+Page last updated: 11 November 2026
 
 System category: A generic system that utilises generative AI models.
 
 Sensitivity ceiling: Up to Confidential, Sensitive High
 
-Controls (9):
+Controls (15):
 
 | ID | Title | Profile level |
 | --- | --- | --- |
 | **GA: Generative AI** | | |
-| GA-1 | Overseas-hosted GenAI API services | 0 |
-| GA-2 | Singapore-hosted GenAI API services | 0 |
-| GA-3 | Non-logging and non-training Agreement | 0 |
-| GA-4 | Data classification for self-hosted GenAI models | 0 |
-| GA-5 | GenAI model formats and loaders | 1 |
-| GA-6 | File upload safeguards | 1 |
-| GA-7 | Evaluation of GenAI accuracy, safety, and output quality | 1 |
-| GA-8 | Inform users about GenAI risks and limitations | 1 |
+| GA-9 | External AI API services - Data classification | 0 |
+| GA-11 | Self-hosted generative AI models - Environments | 0 |
+| GA-12 | Self-hosted generative AI models - Model formats | 1 |
+| GA-13 | Self-hosted generative AI models - Model artefact scanning | 1 |
+| GA-14 | Application safeguards - File uploads | 1 |
+| GA-15 | Application safeguards - Consequential actions | 1 |
+| GA-16 | Application safeguards - Handling of web content | 1 |
+| GA-17 | Application safeguards - Provenance of web content | 1 |
+| GA-18 | Application safeguards - Accuracy of output and actions | 1 |
+| GA-19 | Application safeguards - Safety of output and actions | 1 |
+| GA-20 | Application safeguards - Quality of output and actions | 1 |
+| GA-21 | Deployment and use - Disclaimers on beta status | 0 |
+| GA-22 | Deployment and use - Disclaimers on risks and limitations | 1 |
+| GA-23 | Deployment and use - Risk acceptance and approval | 0 |
 | **DP: Data Protection** | | |
 | DP-8 | Data Classification Disclosure | 1 |
 
@@ -853,7 +1012,7 @@ Controls (92):
 ## Sandbox
 
 Source: https://info.standards.tech.gov.sg/ssp/sandbox/
-Page last updated: 24 March 2026
+Page last updated: 19 November 2026
 
 System category: A generic pilot sandbox system.
 

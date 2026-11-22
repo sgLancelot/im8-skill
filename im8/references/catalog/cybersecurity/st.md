@@ -8,11 +8,11 @@ Controls to validate the security of a system via internal and external testing.
 
 ## ST-1 — Vulnerability Assessment
 
-**Levels:** low-risk: L1, medium-risk: L0
+**Levels:** low-risk cloud: L1, medium-risk cloud: L1, high-risk cloud CII: L1, low-risk on-prem: L1, low-risk SaaS: L2, medium-risk SaaS: L2, sandbox: L2 *(portal text as of 19 November 2026)*
 
 **Statement:** Run regular [type] vulnerability assessment scans for eligible hosts at least every [time period (days)] day(s).
 
-**Guidance:** Select agent-based or network-based scans as necessary. Implement authenticated scans where possible for greater coverage. Use scanners such as Amazon Inspector or Microsoft Defender for Cloud for continuous scanning of cloud systems. For on-premises systems or systems that require periodic scans, subscribe to Vulnerability Management System (VMS). For SaaS, refer to past vulnerability scanning reports done by the SaaS provider, if any.
+**Guidance:** Select agent-based or network-based scans as necessary. Implement authenticated scans where possible for greater coverage. For cloud systems, use scanners such as Amazon Inspector or Microsoft Defender for Cloud for continuous scanning of cloud systems. For on-premises systems, subscribe to Vulnerability Management System (VMS). For SaaS, refer to recent vulnerability scanning reports done by the SaaS provider.
 
 **Risk statement:** Without regular vulnerability assessment scans, hosts remain exposed to undetected security vulnerabilities or misconfigurations, increasing the risk of exploitation and unauthorised access to critical systems.
 
@@ -20,6 +20,8 @@ Controls to validate the security of a system via internal and external testing.
 
 - `st-1_prm_1` — type (type: str) — The type of vulnerability assessment scanning.
 - `st-1_prm_2` — time period (days) (type: int) — The time period in days for vulnerability assessment scans.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/st/
 
 ## ST-2 — Cloud Security Posture Management
 
@@ -47,18 +49,22 @@ Controls to validate the security of a system via internal and external testing.
 
 ## ST-4 — Security Testing Programme
 
-**Levels:** low-risk: L1, medium-risk: L0
+**Levels:** low-risk cloud: L1, medium-risk cloud: L1, high-risk cloud CII: L1, low-risk on-prem: L1, low-risk SaaS: L2, medium-risk SaaS: L2, sandbox: L2 *(portal text as of 19 November 2026)*
 
 **Statement:** Conduct and document a [type] by internal teams or independent external parties every [time period (days)] day(s).
 
-**Guidance:** Refer to the WOG Security Testing Guidelines for recommendations on the conduct of security testing engagements. For systems that are permitted to use Government Bug Bounty Programme as an alternative, obtain a passing rating based on the Agency Readiness Scorecard. For SaaS, refer to past penetration testing reports done by the SaaS provider, if any.
+**Guidance:** Refer to the WOG Security Testing Guidelines for recommendations on the conduct of security testing engagements. For systems that are permitted to use Government Bug Bounty Programme as an alternative, obtain a passing rating based on the Agency Readiness Scorecard. For SaaS, refer to recent penetration testing reports done by the SaaS provider.
 
-**Risk statement:** Without undergoing security testing, there's an increased risk of undetected security weaknesses, leaving the application susceptible to exploitation, data breaches, and unauthorised access.
+For Low-Risk cloud systems, agencies should consider using GovTech’s AI-assisted penetration testing tool - MAIA, to improve testing efficiency and coverage. Submit a MAIA engagement request via this link. Regardless of the approach taken, agencies remain responsible for ensuring test results are comprehensive, validating significant findings, and remediating identified vulnerabilities.
+
+**Risk statement:** Without undergoing security testing, there’s an increased risk of undetected security weaknesses, leaving the application susceptible to exploitation, data breaches, and unauthorised access.
 
 **Parameters:**
 
 - `st-4_prm_1` — type (type: str) — The type of security testing programme.
 - `st-4_prm_2` — time period (days) (type: int) — The time period in days of penetration testing frequency.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/st/
 
 ## ST-5 — Vulnerability Management
 

@@ -18,13 +18,15 @@ Controls to support detection and response to security and operations incidents.
 
 ## LM-2 — Tamper-Resistant Log Storage
 
-**Levels:** low-risk: L1, medium-risk: L1
+**Levels:** low-risk cloud: L1, medium-risk cloud: L1, high-risk cloud CII: L1, low-risk on-prem: L1, low-risk SaaS: L1, medium-risk SaaS: L1, sandbox: L2 *(portal text as of 10 November 2026)*
 
 **Statement:** Protect logs from unauthorised access, modification, and deletion.
 
-**Guidance:** Apply access control policies to logs based on the principle of least privilege. As far as possible, only read access should be granted. Logs sent to GCC Central Logs are tamper-resistant.
+**Guidance:** Apply access control policies to logs based on the principle of least privilege. As far as possible, only read access should be granted and tamper-resistant.
 
 **Risk statement:** Without protection measures, logs are susceptible to unauthorised access, modification, or deletion, leading to the risk of tampering, loss of crucial audit information, and compromised forensic analysis capabilities during security incidents.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/lm/
 
 ## LM-3 — Network Flow Logging
 
@@ -38,13 +40,15 @@ Controls to support detection and response to security and operations incidents.
 
 ## LM-4 — Audit Logging
 
-**Levels:** low-risk: L1, medium-risk: L0
+**Levels:** low-risk cloud: L1, medium-risk cloud: L1, high-risk cloud CII: L1, low-risk SaaS: L1, medium-risk SaaS: L1, sandbox: L2 *(portal text as of 10 November 2026)*
 
-**Statement:** Log management and audit events.
+**Statement:** Log user account activities and system audit events to detect anomalous or unauthorised actions.
 
-**Guidance:** For cloud, configure CloudTrail for AWS or its equivalents to log management and audit events such as changes to accounts, access, IAM policies and resources. For SaaS and COTS, enable audit logging features.
+**Guidance:** For cloud, configure CloudTrail for AWS or its equivalents to log management and audit events such as changes to accounts, access, IAM policies and resources. For SaaS and COTS applications, enable audit logging to track account-related activities. Logs should capture activities like authentication events (logins, MFA), access changes (role/permission modifications), and administrative actions (user management tasks). Each log entry should include essential details such as user identity, timestamp, source (IP/device), and the specific activity performed, to support effective monitoring, investigation, and compliance audits. In addition, for SaaS onboarded to WOG Entra or other identity providers, login attempts should be captured at the identity provider level.
 
-**Risk statement:** Neglecting to log and manage audit events increases the risk of undetected security incidents, compromises visibility into system activities, and hinders effective forensic analysis and compliance monitoring.
+**Risk statement:** Failure to log account activities may hinder the detection of unauthorised access attempts or successful breaches, and impede effective incident investigation and response.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/lm/
 
 ## LM-5 — Database Logging
 
@@ -92,13 +96,15 @@ Controls to support detection and response to security and operations incidents.
 
 ## LM-9 — Security Monitoring and Alerting
 
-**Levels:** low-risk: L1, medium-risk: L0
+**Levels:** low-risk cloud: L1, medium-risk cloud: L1, high-risk cloud CII: L1, low-risk on-prem: L1, low-risk SaaS: L1, medium-risk SaaS: L1, sandbox: L2 *(portal text as of 10 November 2026)*
 
 **Statement:** Configure security monitoring to identify potential security violations or breaches and send automated alerts, and respond to them accordingly.
 
-**Guidance:** Enable Amazon GuardDuty, Microsoft Azure Security Center, or their equivalents.
+**Guidance:** For IaaS/PaaS, enable Amazon GuardDuty, Microsoft Azure Security Center, or their equivalents. For SaaS, implement monitoring and detection capabilities to identify anomalous or unauthorised activities, such as: a) Unauthorised privilege escalation or role changes b) Dormant or inactive accounts becoming active c) Administrative actions performed outside approved change windows. Where supported, integrate SaaS audit logs with centralised logging or monitoring platforms (e.g., SIEM) to enable continuous monitoring and alerting. Where native logging is limited, work with the SaaS provider to obtain visibility into security-relevant events.
 
-**Risk statement:** Without configuring security monitoring to identify potential security violations or breaches and send automated alerts, there's an increased risk of delayed or unnoticed security incidents, hindering timely response and mitigation efforts to protect the system from further compromise.
+**Risk statement:** Without configuring security monitoring to identify potential security violations or breaches and send automated alerts, there’s an increased risk of delayed or unnoticed security incidents, hindering timely response and mitigation efforts to protect the system from further compromise.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/lm/
 
 ## LM-10 — Resource Usage Monitoring and Alerting
 
@@ -196,13 +202,15 @@ Controls to support detection and response to security and operations incidents.
 
 ## LM-19 — Log Sanitisation
 
-**Levels:** low-risk: L2, medium-risk: L1
+**Levels:** low-risk cloud: L2, medium-risk cloud: L1, high-risk cloud CII: L1, low-risk on-prem: L2, low-risk SaaS: L1, medium-risk SaaS: L1, sandbox: L2 *(portal text as of 10 November 2026)*
 
 **Statement:** Sanitise logs to protect classified and sensitive data before it is recorded in any logging system or shared to any third party.
 
-**Guidance:** Identify types of classified and sensitive data that may appear in logs. When logging, consider using sanitisation techniques like masking or tokenisation. This ensures that sensitive information — such as PII, credentials, API keys, and payment details — are not stored in plaintext during log collection.
+**Guidance:** When logging classified and sensitive data, use sanitisation techniques like masking or tokenisation to prevent information from stored in plaintext during log collection and before logs are shared with any third party. This include information such as hostnames, IP addresses, Personal Identifiable Information (PII), credentials, API keys, and payment details.
 
 **Risk statement:** Failing to sanitise logs increases the risk of unauthorised exposure or misuse of sensitive information and other confidential data. This exposure could lead to privacy breaches, financial losses, compliance violations and damage to national reputation.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/lm/
 
 ## LM-20 — User and Entity Behaviour Analytics
 

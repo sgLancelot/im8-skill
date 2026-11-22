@@ -2,7 +2,7 @@
 
 <!-- generated-by: scripts/sync_oscal.py (OSCAL sync, GovTechSG/tech-standards) -->
 
-Family code: `dp` | Controls: 7
+Family code: `dp` | Controls: 9
 
 Controls to protect the data of a system.
 
@@ -32,13 +32,15 @@ Controls to protect the data of a system.
 
 ## DP-3 — Data in Transit Encryption
 
-**Levels:** low-risk: L1, medium-risk: L1
+**Levels:** low-risk cloud: L1, medium-risk cloud: L1, high-risk cloud CII: L1, low-risk on-prem: L1, low-risk SaaS: L1, medium-risk SaaS: L1, sandbox: L2 *(portal text as of 10 November 2026)*
 
 **Statement:** Encrypt data in transit.
 
-**Guidance:** While some CSP services transparently encrypt data in transit at the network layer, data at the application layer should be encrypted using protocols such as Transport Layer Security (TLS) and Secure Socket Layer (SSL).
+**Guidance:** While some CSP services transparently encrypt data in transit at the network layer, data at the application layer should be encrypted using protocols such as Transport Layer Security (TLS) 1.2 and above
 
 **Risk statement:** Failure to encrypt data in transit increases the risk of unauthorised interception and eavesdropping, potentially leading to data breaches, unauthorised access, and compromise of sensitive information during transmission.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/dp/
 
 ## DP-4 — Government on Commercial Cloud (GCC)
 
@@ -82,3 +84,27 @@ c) US Department of Defence's Standards (DoD 5220.22-M).
 **Guidance:** Where possible, use built-in solutions such as Microsoft Purview or Google Workspace data loss prevention rules. Regularly review and update data loss prevention policies to adapt to evolving threats and organisational needs.
 
 **Risk statement:** Failure to implement data loss prevention measures increases the risk of unauthorised data exfiltration, accidental data leaks, and data breaches, compromising sensitive information and organisational integrity.
+
+## DP-8 — Data Classification Disclosure
+
+**Levels:** low-risk SaaS: L1, medium-risk SaaS: L1, GenAI: L1 *(portal; portal control, not in the OSCAL release)*
+
+**Statement:** For internal applications serving public officers, specify the highest permitted security and sensitivity classification for input data, such as text, audio, or multimedia/file uploads, in the system's user interface and guides.
+
+**Guidance:** Indicate with a clear message, either at or near the input field, the relevant data classification that may be used with the system. For GenAI systems, note that any proposed deviations to this control must be submitted to and approved by NAIG.
+
+**Risk statement:** Users who are not informed of the maximum allowed data classification may submit sensitive information the system is not permitted to process, risking data breaches, legal violations, and reputational harm.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/dp/
+
+## DP-10 — Secure Data Wipe and Verification
+
+**Levels:** low-risk SaaS: L1, medium-risk SaaS: L1 *(portal; added 10 Nov 2026)*
+
+**Statement:** Ensure that all government information in resources assigned to Third party are destroyed or securely wiped.
+
+**Guidance:** Use secure data wiping tools meeting international standards (NIST SP 800-88 or ISO/IEC 27040) for complete data destruction. Obtain documented evidence confirming secure destruction of government information and conduct periodic compliance audit
+
+**Risk statement:** Ensuring resources destroy or securely wipe government information reduces the risk of unauthorised access, data leakage, and ensures compliance with data protection and residency requirement.
+
+Source: https://info.standards.tech.gov.sg/control-catalog/cybersecurity/dp/
